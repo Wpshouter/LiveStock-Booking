@@ -13,7 +13,7 @@ const Header = () => {
     
 
 const { data: session, isPending } =  authClient.useSession();
-console.log(session, "session");
+//console.log(session, "session");
     const links = <>
             <li>
                 <NavLink href="/" className="text-left p-1 pb-0">Home</NavLink>  
