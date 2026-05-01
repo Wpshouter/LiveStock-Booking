@@ -8,8 +8,12 @@ const NavLink = ({href, children, className}) => {
     const pathName = usePathname();
     console.log(pathName, "pathname");
     const isActive = href === pathName;
+    let clasessss = '';
+    if(pathName === '/'){
+           clasessss = 'text-white'; 
+    }
     return (
-        <Link className={`${isActive ? "bg-red-500" : ''} ${className} ` } href={href}>
+        <Link className={`${isActive ? " text-[#FDAB03]" : `${clasessss}`} ${className} rounded-0 font-bold text-md ` } href={href}>
             {children}
         </Link>
     );

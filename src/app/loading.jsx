@@ -1,9 +1,9 @@
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import React from 'react';
 
-const Loading = () => {
+const LoadingPage = () => {
     return (
-        <div className='flex w-full justify-center items-center'>
+        <div className='flex w-full h-screen justify-center items-center'>
             <DotLottieReact
                 src="/loading.lottie"
                 loop
@@ -14,4 +14,4 @@ const Loading = () => {
     );
 };
 
-export default Loading;
+export default LoadingPage;
