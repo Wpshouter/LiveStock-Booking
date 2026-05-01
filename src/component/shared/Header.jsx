@@ -55,7 +55,7 @@ console.log(session, "session");
                         <SlLogout className='text-[20px]'/>
                             Logout
                         </button>
-                        <p><Image className='rounded-full border-gray-800  border 1' width={50} height={50} alt="user image" src={session?.user.image} /></p>
+                        <Link href="/my-profile"><p><Image className='rounded-full border-gray-800  border 1' width={50} height={50} alt="user image" src={session?.user.image} /></p></Link>
                     </div>
                     :
                     <>

@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
        
         {/* <Navbar/> */}
         {children}
-                <ToastContainer />
+                <ToastContainer style={{ zIndex: 9999 }} />
 
       </body>
     </html>
