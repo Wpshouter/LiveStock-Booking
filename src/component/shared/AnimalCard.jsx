@@ -67,7 +67,7 @@ export const AnimalCard = ({ animal }) => {
 
         <div className="mt-auto">
           <Link href={`/Animal/${id}`} className="w-full block">
-            <button className="w-full py-3 bg-[#FDAB03]  hover:bg-orange-500 text-slate-900 hover:text-white font-bold rounded-md text-sm transition-colors duration-200 uppercase tracking-wider">
+            <button className="cursor-pointer w-full py-3 bg-[#FDAB03]  hover:bg-orange-500 text-slate-900 hover:text-white font-bold rounded-md text-sm transition-colors duration-200 uppercase tracking-wider">
               View Details
             </button>
           </Link>
