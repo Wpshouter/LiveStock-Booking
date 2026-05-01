@@ -70,10 +70,10 @@ const page = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
                     <label className="label">Email</label>
-                    <input defaultValue={``} {...register("email")} type="email" className="input" placeholder="Email" />
+                    <input required defaultValue={``} {...register("email")} type="email" className="input" placeholder="Email" />
 
                     <label className="label">Password</label>
-                    <input  defaultValue={``} {...register("password")}  type="password" className="input" placeholder="Password" />
+                    <input required defaultValue={``} {...register("password")}  type="password" className="input" placeholder="Password" />
 
                     <button className="btn btn-primary text-white  mt-4"> <FiLogIn className='text-[20px]'/> Login</button>
                     <p className='mt-4'>Don't have an account? <Link className='text-blue-500 underline mx-2' href="/Register">Register</Link></p>

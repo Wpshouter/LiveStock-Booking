@@ -69,16 +69,16 @@ const page = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
                     <label className="label">Name</label>
-                    <input defaultValue={``} {...register("name")} type="text" className="input" placeholder="Your Name" />
+                    <input required defaultValue={``} {...register("name")} type="text" className="input" placeholder="Your Name" />
                     
                     <label className="label">Email</label>
-                    <input defaultValue={``} {...register("email")} type="email" className="input" placeholder="Your Email" />
+                    <input required defaultValue={``} {...register("email")} type="email" className="input" placeholder="Your Email" />
 
                     <label className="label">Photo Url</label>
-                    <input  defaultValue={``} {...register("photo_url")}  type="url" className="input" placeholder="Photo Url" />
+                    <input   defaultValue={``} {...register("photo_url")}  type="url" className="input" placeholder="Photo Url" />
 
                     <label className="label">Password</label>
-                    <input  defaultValue={``} {...register("password")}  type="password" className="input" placeholder="Password" />
+                    <input required  defaultValue={``} {...register("password")}  type="password" className="input" placeholder="Password" />
 
                     <button  type="submit" className="btn btn-primary mt-4">  <SiGnuprivacyguard className='text-[20px]' ></SiGnuprivacyguard> Register</button>
                      <p className='mt-4'>Already have an account? <Link className='text-blue-500 underline mx-2' href="/Login">Login</Link></p>

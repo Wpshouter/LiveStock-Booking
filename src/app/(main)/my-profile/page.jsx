@@ -10,7 +10,7 @@ const page = async() => {
         })
         if(session) {
                return (
-          <div className='bg-[#FDF6E3]'>
+          <div className='bg-[#FDF6E3] px-5 md:px-0'>
             <div className='container mx-auto'>
               <h3 className='text-3xl font-bold mb-15 pt-15  text-[#8B5E3C]'>My Profile</h3>
             <div className='bg-white rounded-xl max-w-2xl mx-auto p-5 text-center shadow-md mb-20'>

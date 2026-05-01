@@ -2,7 +2,7 @@ import React from 'react';
 
 const TopBridge = ({animals}) => {
     return (
-               <div className='bg-[#ffff] pb-25'>
+               <div className='bg-[#ffff] pb-25 px-5 md:px-0'>
             <div className='container mx-auto'>
                 <h3 className='text-3xl md:text-4xl font-bold text-center mb-15 pt-15 text-[#8B5E3C]  p-2 max-w-74 mx-auto'>Top Breeds</h3>
                 <div>

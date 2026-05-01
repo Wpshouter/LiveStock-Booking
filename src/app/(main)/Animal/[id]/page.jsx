@@ -15,7 +15,7 @@ const page = async ({params} ) => {
     const Animal = Animals.find(a => a.id == id);
     console.log(Animal);
     return (
-         <div className='bg-[#FDF6E3]'>
+         <div className='bg-[#FDF6E3] px-5 md:px-0'>
             <div className='container mx-auto'>
                    <h3 className='text-3xl font-bold mb-15 pt-15  text-[#8B5E3C]'>{Animal.name} from {Animal.location}{}</h3>
                     <AnimalDetails animal={Animal} />
