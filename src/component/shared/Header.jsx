@@ -37,7 +37,7 @@ console.log(session, "session");
                         {links}
                     </ul>
                     </div>
-                    <Link href="/" className=""><Image alt="logo" loading='eager' className='max-w-[80%]' src='/logo.png' width={250} height={100} /></Link>
+                    <Link href="/" className=""><Image alt="logo" loading='eager' className='max-w-[80%] w-auto h-auto' src='/logo.png' width={250} height={100} /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

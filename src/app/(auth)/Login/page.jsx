@@ -66,7 +66,7 @@ const page = () => {
     return (
         <div className='container mx-auto py-20 flex justify-center items-center'>
             <div>
-                   <p className='mb-4 text-center'><Image className='mx-auto' src={'/logo.png'} alt={'logo'} width={200} height={100} /></p>
+                    <Link href="/"> <p className='mb-4 text-center'><Image className='mx-auto' src={'/logo.png'} alt={'logo'} width={200} height={100} /></p></Link>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
                     <label className="label">Email</label>
