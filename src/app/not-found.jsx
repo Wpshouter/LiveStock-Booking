@@ -21,7 +21,7 @@ export default function NotFound() {
         <div className="mt-10 flex items-center justify-center gap-x-6">
           <Link
             href="/"
-            className="rounded-md bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200"
+            className="rounded-mdbtn btn-primary  bg-[#FDAB03] border-[#FDAB03] text-black hover:bg-orange-500 px-4 py-2"
           >
             Go back home
           </Link>
