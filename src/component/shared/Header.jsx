@@ -16,10 +16,10 @@ const { data: session, isPending } =  authClient.useSession();
 //console.log(session, "session");
     const links = <>
             <li>
-                <NavLink href="/" className="text-left p-1 pb-0">Home</NavLink>  
+                <NavLink href="/" className="text-left text-md p-1 pb-0">Home</NavLink>  
             </li>
             <li>
-                <NavLink href="/Animals" className="p-1 pb-0">All Animals</NavLink>
+                <NavLink href="/Animals" className="p-1  text-md  pb-0">All Animals</NavLink>
             </li>
             {
                  (session) &&     <li className='md:hidden'>
