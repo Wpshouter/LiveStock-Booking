@@ -1,16 +1,18 @@
 "use client";
+import LoadingPage from '@/app/loading';
 import GoogleLoginBtn from '@/component/shared/GoogleLoginBtn';
 import { authClient } from '@/lib/auth-client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { FaGoogle } from 'react-icons/fa';
 import { SiGnuprivacyguard } from 'react-icons/si';
 import { Bounce, toast } from 'react-toastify';
 
 const page = () => {
+         const [loading, setLoading] = useState(false);
         const {
         register,
         handleSubmit,
@@ -18,6 +20,7 @@ const page = () => {
         formState: { errors },
       } = useForm()
         const onSubmit = async(data) => {
+            setLoading(true);
             console.log(data);
             const {email, name, photo_url, password} = data;
             const {data:res, error} = await authClient.signUp.email({
@@ -29,6 +32,7 @@ const page = () => {
             })
             console.log(res, error);
             if(error){
+                 setLoading(false);
                 //alert(error.message);
                   toast.error(`${error.message}`, {
                     position: "top-center",
@@ -43,10 +47,10 @@ const page = () => {
                 });
             }
             if(res){
-           
-                toast.success('🦄 Registration Done!', {
+                 setLoading(false);
+                toast.success('🦄 Registration Done! Redirecting....', {
                     position: "top-center",
-                    autoClose: 2500,
+                    autoClose: 1500,
                     hideProgressBar: false,
                     closeOnClick: false,
                     pauseOnHover: true,
@@ -61,7 +65,11 @@ const page = () => {
                 });
             }
         }
-        
+      if (loading) {
+        return (
+          <LoadingPage/>
+        );
+      }
     return (
         <div className='container mx-auto py-20 flex justify-center items-center'>
             <div>
@@ -85,7 +93,7 @@ const page = () => {
                 </fieldset>
             </form>
              <div className='flex items-center gap-4'>
-                            <GoogleLoginBtn/>
+                            <GoogleLoginBtn setLoading={setLoading}/>
                         </div>
             </div>
         </div>

@@ -3,8 +3,11 @@ import { authClient } from '@/lib/auth-client';
 import React from 'react';
 import { FaGoogle } from 'react-icons/fa';
 
-const GoogleLoginBtn = () => {
+const GoogleLoginBtn = ({setLoading}) => {
+
         const handle_google_login = async () => {
+                setLoading(true);
+                //return;
                       const data = await authClient.signIn.social({
                 provider: "google",
               });
