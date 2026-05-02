@@ -8,6 +8,7 @@ https://live-stock-booking-tuul.vercel.app/
 
 ## Features
 
+- Allow user to book livestock for qurbani
 - Allow user to singin and singup
 - Allow user to singin with google
 - Shows Booking form Modal
