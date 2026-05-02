@@ -55,7 +55,7 @@ const UpdateForm = ({user}) => {
     return (
         <div className='my-4'>
                      <form onSubmit={handleSubmit(onSubmit)}>
-                <fieldset className="fieldset bg-base-100 border-base-300 rounded-box w-md mx-auto border p-4">
+                <fieldset className="fieldset bg-base-100 border-base-300 rounded-box w-full mx-auto border p-4">
                     <label className="label">Name</label>
                     <input required defaultValue={user.name} {...register("name")} type="text" className="input w-full" placeholder="Your Name" />
                     
